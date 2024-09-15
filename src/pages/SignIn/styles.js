@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import semusImg from '../../'
 
 export const Container = styled.div`
 
@@ -40,5 +41,11 @@ export const Form = styled.form`
         color: ${({ theme }) => theme.COLORS.ORANGE};
 
     }
+    export const Background = styled.div`
+    flex: 1;
+    background: url(${semus_logoImg}) no-repeat center center;
+    background-size: cover;
+    
+    
 `;
 

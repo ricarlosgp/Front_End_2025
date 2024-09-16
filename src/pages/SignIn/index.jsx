@@ -3,9 +3,8 @@ import { FiMail, FiLock } from 'react-icons/fi';
 import { Input } from '../../components/Input';
 import { Button } from '../../components/Button';
 
-import { Container, Form, Background } from './styles';
+import { Container, Form, Background, TimbirasProfile, SemusProfile } from './styles';
 
-import { Container, Form } from './styles';
 
 export function SignIn() {
     return (
@@ -28,14 +27,17 @@ export function SignIn() {
                     icon={FiLock}
                 />
 
-                <Button title = "Entrar" /> 
+                <Button title="Entrar" /> 
 
-                < a href="#">
+                <a href="#">
                     Criar conta
                 </a>    
-
-            </Form>   
-            <Background/>       
+            </Form>
+            
+            <Background>
+                <TimbirasProfile> </TimbirasProfile>
+                <SemusProfile> </SemusProfile>
+            </Background>
         </Container>
     );
 }

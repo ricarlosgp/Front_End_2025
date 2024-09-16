@@ -32,8 +32,8 @@ export const Form = styled.form`
 
     > h2 { //Faça seu login
         font-size: 24px;
-        margin-top: 84px;
-        margin-bottom: 24px;
+        margin: 48px 0;
+        
     }    
 
     > a {

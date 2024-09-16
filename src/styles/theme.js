@@ -10,6 +10,7 @@ export default {
       GRAY_300: "#666360",  
       RED: "#FF002E",
 
-      SEMUS_1: "#000020"      
+      SEMUS_1: "#000020", 
+      SEMUS2: "#4682B4"     
     }
   }

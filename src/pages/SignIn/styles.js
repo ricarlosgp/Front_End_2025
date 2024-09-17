@@ -76,8 +76,8 @@ export const SemusProfile = styled.div`
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    width: 230px;  // Ajuste a largura conforme necessário
-    height: 100px; // Ajuste a altura conforme necessário
+    width: 230px; 
+    height: 100px; 
     
 `;
 

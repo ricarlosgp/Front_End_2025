@@ -10,7 +10,11 @@ export default {
       GRAY_300: "#666360",  
       RED: "#FF002E",
 
-      SEMUS_1: "#000020", 
-      SEMUS2: "#4682B4"     
+      SEMUS1: "#000020", 
+      SEMUS2: "#4682B4",
+      SEMUS3: "#4682B4",  
+      SEMUS4: "#F8F8FF", 
+      PEC:    "#071d41", 
+      BANDEIRA: "#0364b0",
     }
   }

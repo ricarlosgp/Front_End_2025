@@ -21,24 +21,31 @@ export const Form = styled.form`
     text-align: center;
 
     > h1 {//SEMUS
-        font-size: 48px;
-        color: ${({ theme }) => theme.COLORS.WHITE};
+        font-size: 58px;
+        color: ${({ theme }) => theme.COLORS.BANDEIRA};       
+        
+        
     }
     
     > p {//secretaria municipal de saúde
         font-size: 14px;
-        color: ${({ theme }) => theme.COLORS.GRAY_100};
+        color: ${({ theme }) => theme.COLORS.BANDEIRA};
+        font-weight: 700;
     }
 
-    > h2 { //Faça seu login
+    > h2 { //Crie sua conta
         font-size: 24px;
         margin: 48px 0;
+        color: ${({ theme }) => theme.COLORS.BANDEIRA};
         
     }    
 
-    > a {
+    > a {//Voltar para o Login
         margin-top: 34px;
-        color: ${({ theme }) => theme.COLORS.ORANGE};
+        color: ${({ theme }) => theme.COLORS.BANDEIRA};
+        font-family: "Raleway", sans-serif;
+        font-weight: 700;
+        
     }        
     `;
 

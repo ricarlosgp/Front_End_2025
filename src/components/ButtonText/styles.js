@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.button` 
-    background: none; 
-    color: ${({ theme }) => theme.COLORS.ORANGE }; 
+    background: red;
+    color: ${({ theme }) => theme.COLORS.RED }; 
 
     border: none;
     font-size: 16px;

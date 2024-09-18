@@ -5,7 +5,7 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
 
-    background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900 } ;
+    background-color: ${({ theme }) => theme.COLORS.SEMUS4} ;
     color: ${({ theme }) => theme.COLORS.GRAY_300 } ;
 
     margin-bottom: 8px;
@@ -17,12 +17,12 @@ export const Container = styled.div`
 
         padding: 12px;
 
-        color: ${({ theme }) => theme.COLORS.WHITE } ;
+        color: ${({ theme }) => theme.COLORS.BACKGROUND_900} ;
         background: transparent; 
         border: 0; 
 
         &:placeholder {
-            color: ${({ theme }) => theme.COLORS.GRAY_300 } ;
+            color: ${({ theme }) => theme.COLORS.GRAY_900 } ;
         }       
 
     }

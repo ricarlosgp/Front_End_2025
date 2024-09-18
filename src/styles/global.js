@@ -12,7 +12,7 @@ export default createGlobalStyle`
         box-sizing: border-box;
     }
     body {
-        background-color: ${({ theme }) => theme.COLORS.SEMUS_1}; 
+        background-color: ${({ theme }) => theme.COLORS.WHIT}; 
         color: ${({ theme }) => theme.COLORS.WHITE}; 
         -webkit-font-smoothing: antialiased; 
     }

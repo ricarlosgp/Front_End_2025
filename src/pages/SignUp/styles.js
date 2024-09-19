@@ -20,36 +20,21 @@ export const Form = styled.form`
 
     text-align: center;
 
-    > h1 {//SEMUS
-        font-size: 58px;
-        color: ${({ theme }) => theme.COLORS.BANDEIRA};       
-        
-        
-    }
-    
-    > p {//secretaria municipal de saúde
-        font-size: 14px;
-        color: ${({ theme }) => theme.COLORS.BANDEIRA};
-        font-weight: 700;
-    }
-
     > h2 { //Crie sua conta
         font-size: 24px;
-        margin: 48px 0;
+        margin: 14px 0;
         color: ${({ theme }) => theme.COLORS.BANDEIRA};
         
     }    
 
     > a {//Voltar para o Login
-        margin-top: 34px;
+        margin-top: 20px;
         color: ${({ theme }) => theme.COLORS.BANDEIRA};
         font-family: "Raleway", sans-serif;
         font-weight: 700;
         
     }        
     `;
-
-
 
 export const Background = styled.div`
     flex: 1;
@@ -62,14 +47,14 @@ export const TimbirasProfile = styled.div`
     background: url(${timbirasImg}) no-repeat center center;
     background-size: contain;  // Ajuste para "cover" ou "contain" conforme necessário
     position: absolute;
-    top: 40%;
-    left: 20%;
+    top: 86%;
+    left: 125%;
     transform: translate(-50%, -50%);
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    width: 500px;  // Ajuste a largura conforme necessário
-    height: 400px; // Ajuste a altura conforme necessário
+    width: 200px;  
+    height: 200px; 
     
 `;
 
@@ -77,14 +62,14 @@ export const SemusProfile = styled.div`
     background: url(${semusImg}) no-repeat center center;
     background-size: contain;  // Ajuste para "cover" ou "contain" conforme necessário
     position: absolute;
-    top: 70%;
-    left: 20%;
+    top: 15%;
+    left: 125%;
     transform: translate(-50%, -50%);
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    width: 230px;  // Ajuste a largura conforme necessário
-    height: 100px; // Ajuste a altura conforme necessário
+    width: 300px;  // Ajuste a largura conforme necessário
+    height: 300px; // Ajuste a altura conforme necessário
     
 `;
 

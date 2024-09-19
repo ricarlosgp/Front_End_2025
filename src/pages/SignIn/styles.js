@@ -20,21 +20,9 @@ export const Form = styled.form`
 
     text-align: center;
 
-    > h1 {//SEMUS
-        font-size: 58px;
-        color: ${({ theme }) => theme.COLORS.SEMUS3};
-        
-    }
-    
-    > p {//secretaria municipal de saúde
-        font-size: 14px;
-        color: ${({ theme }) => theme.COLORS.SEMUS3};
-        font-weight: 700;
-    }
-
     > h2 { //Faça seu login
         font-size: 24px;
-        margin-top: 84px;
+        margin-top: 20px;
         margin-bottom: 24px;
         color: ${({ theme }) => theme.COLORS.SEMUS3};
         font-weight: 800;
@@ -42,10 +30,10 @@ export const Form = styled.form`
     }    
 
     > a {//criar conta
-        margin-top: 34px;
-        color: ${({ theme }) => theme.COLORS.SEMUS3};
+        margin-top: 20px;
+        color: ${({ theme }) => theme.COLORS.BANDEIRA};
         font-family: "Raleway", sans-serif;
-        font-weight: 800;
+        font-weight: 700;
     }        
     `;
 
@@ -62,14 +50,14 @@ export const TimbirasProfile = styled.div`
     background: url(${timbirasImg}) no-repeat center center;
     background-size: contain;  // Ajuste para "cover" ou "contain" conforme necessário
     position: absolute;
-    top: 40%;
-    left: 20%;
+    top: 85%;
+    left: -27%;
     transform: translate(-50%, -50%);
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    width: 500px;  // Ajuste a largura conforme necessário
-    height: 400px; // Ajuste a altura conforme necessário
+    width: 200px;  
+    height: 200px; 
     
 `;
 
@@ -77,14 +65,14 @@ export const SemusProfile = styled.div`
     background: url(${semusImg}) no-repeat center center;
     background-size: contain;  // Ajuste para "cover" ou "contain" conforme necessário
     position: absolute;
-    top: 70%;
-    left: 20%;
+    top: 20%;
+    left: -28%;
     transform: translate(-50%, -50%);
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    width: 230px; 
-    height: 100px; 
+    width: 300px; 
+    height: 300px; 
     
 `;
 

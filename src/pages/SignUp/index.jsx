@@ -1,9 +1,8 @@
 import { FiMail, FiLock, FiUser } from 'react-icons/fi';
-
 import { Input } from '../../components/Input';
 import { Button } from '../../components/Button';
-
 import { Container, Form, Background, TimbirasProfile, SemusProfile } from './styles';
+import { Link } from 'react-router-dom';
 
 
 export function SignUp() {
@@ -14,9 +13,6 @@ export function SignUp() {
                 <SemusProfile> </SemusProfile>
             </Background>
             <Form>
-                <h1>SEMUS</h1>
-                <p>Secretaria Municipal de Saúde</p>
-
                 <h2>Crie sua conta</h2>
 
                 <Input
@@ -39,9 +35,9 @@ export function SignUp() {
 
                 <Button title="Cadastrar" /> 
 
-                <a href="#">
-                    Voltar para o Login
-                </a>    
+                <Link to="/">
+                    Voltar para o login
+                </Link>   
             </Form>            
             
         </Container>

@@ -1,41 +1,39 @@
-import { Container, Menu, Search, Content, NewNote } from './styles';
-
+import { Container, Menu, UBS, Content, ProfileJan, ProfileFev, ProfileMar, ProfileAbr, ProfileMai, ProfileJun, ProfileJul, ProfileAgo, ProfileSet, ProfileOut, ProfileNov, ProfileDez  } from './styles';
 import { Header } from '../../components/Header';
 import { ButtonText } from '../../components/ButtonText';
-
 export function Home() {
-    return(
+    return (
         <Container>
-            <Header/>
-
+            <Header />
             <Menu>
-                <li><ButtonText title="JANEIRO" /></li>
-                <li><ButtonText title="FEVEREIRO" /></li>
-                <li><ButtonText title="MARÇO" /></li>
-                <li><ButtonText title="ABRIL" /></li>
-                <li><ButtonText title="MAIO" /></li>
-                <li><ButtonText title="JUNHO" /></li>
-                <li><ButtonText title="JULHO" /></li>
-                <li><ButtonText title="AGOSTO" /></li>
-                <li><ButtonText title="SETEMBRO" /></li>
-                <li><ButtonText title="OUTUBRO" /></li>
-                <li><ButtonText title="NOVEMBRO" /></li>
-                <li><ButtonText title="DEZEMBRO" /></li>           
-                           
+                <ProfileJan/> <ProfileFev/> <ProfileMar/>
+                <ProfileAbr/> <ProfileMai/> <ProfileJun/>
+                <ProfileJul/> <ProfileAgo/>  <ProfileSet/>
+                <ProfileOut/> <ProfileNov/>  <ProfileDez/>
+                        
+                <li><ButtonText title="JAN" /></li>                
+                <li><ButtonText title="FEV" /></li>
+                <li><ButtonText title="MAR" /></li>
+                <li><ButtonText title="ABR" /></li>
+                <li><ButtonText title="MAI" /></li>
+                <li><ButtonText title="JUN" /></li>
+                <li><ButtonText title="JUL" /></li>
+                <li><ButtonText title="AGO" /></li>
+                <li><ButtonText title="SET" /></li>
+                <li><ButtonText title="OUT" /></li>
+                <li><ButtonText title="NOV" /></li>
+                <li><ButtonText title="DEZ" /></li>
             </Menu>
-
-            <Search>
-
-            </Search>
 
             <Content>
 
+            <UBS>
+                <h1>UNIDADE BÁSICA DE SAÚDE SÃO RAIMUNDO I</h1>
+                <strong>CNES: 7179553</strong>
+            </UBS>
+            
+                
             </Content>
-
-            <NewNote>
-
-            </NewNote>
-
         </Container>
     );
 }

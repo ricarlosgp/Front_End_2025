@@ -8,7 +8,7 @@ export function Header() {
             <SemusProfile> </SemusProfile> 
 
                 <div>
-                    <span>Prefitura Municipal de Timbiras-MA</span>
+                    <span>PREFEITURA MUNICIPAL DE TIMBIRAS-MA</span>
                     <strong>UBS SÃO RAIMUNDO I</strong>
                     <strong>ESCALA DE TRABALHO</strong>
                 </div>

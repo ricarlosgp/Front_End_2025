@@ -15,8 +15,8 @@ export const Container = styled.div`
         padding: 0 124px;
 
         svg {
-            color: ${({ theme }) => theme.COLORS.GRAY_100};
-            font-size: 24PX;
+            color: ${({ theme }) => theme.COLORS.WHITE};
+            font-size: 34PX;
         }    
     }
 `;
@@ -48,7 +48,7 @@ export const FiCameraProfile = styled.div`
     width: 38px;
     height: 34px;
 
-    background-color: ${({ theme }) => theme.COLORS.ORANGE};
+    background-color: ${({ theme }) => theme.COLORS.SEMUS2};
     border-radius: 50%;
 
     display: flex;
@@ -67,7 +67,7 @@ export const FiCameraProfile = styled.div`
         
     svg {
         
-        color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
+        color: ${({ theme }) => theme.COLORS.WHITE};
         cursor: pointer;
         width: 28px;
         height: 28px;        

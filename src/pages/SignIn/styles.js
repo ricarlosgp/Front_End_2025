@@ -1,16 +1,13 @@
 import styled from 'styled-components';
-import jalecoImg from '../../images/jaleco.jpg'; 
-import timbirasImg from '../../images/timbiras.png'
-import semusImg from '../../images/semus.png'
+import jalecoImg from '../../images/jaleco.jpg';
 
 export const Container = styled.div`
+    height: 100vh;
     display: flex;
-    height: 100vh;  
-    align-items: stretch;    
+    align-items:stretch;
 `;
 
-export const Form = styled.form`
-    
+export const Form = styled.form `
     padding: 0 136px;
 
     display: flex;
@@ -20,59 +17,22 @@ export const Form = styled.form`
 
     text-align: center;
 
-    > h2 { //Faça seu login
-        font-size: 24px;
-        margin-top: 20px;
-        margin-bottom: 24px;
-        color: ${({ theme }) => theme.COLORS.SEMUS3};
-        font-weight: 800;
-        font-family: "Raleway", sans-serif;
-    }    
+    > h1 {
+        font-size: 48px;
+        color: ${({ theme }) => theme.COLORS.PEC};
+    }
 
-    > a {//criar conta
-        margin-top: 20px;
-        color: ${({ theme }) => theme.COLORS.BANDEIRA};
-        font-family: "Raleway", sans-serif;
-        font-weight: 700;
-    }        
-    `;
+    > a {
+        margin-top: 124px;
+        color: ${({ theme }) => theme.COLORS.PEC};
+    }
 
-
+`;
 
 export const Background = styled.div`
-    flex: 1;
+    flex:1;
     background: url(${jalecoImg}) no-repeat center center;
     background-size: cover;
-    position: relative;
-`;
 
-export const TimbirasProfile = styled.div`
-    background: url(${timbirasImg}) no-repeat center center;
-    background-size: contain;  // Ajuste para "cover" ou "contain" conforme necessário
-    position: absolute;
-    top: 85%;
-    left: -27%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    width: 200px;  
-    height: 200px; 
-    
-`;
 
-export const SemusProfile = styled.div`
-    background: url(${semusImg}) no-repeat center center;
-    background-size: contain;  // Ajuste para "cover" ou "contain" conforme necessário
-    position: absolute;
-    top: 20%;
-    left: -28%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    width: 300px; 
-    height: 300px; 
-    
 `;
-

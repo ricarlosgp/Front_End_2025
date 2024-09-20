@@ -1,10 +1,9 @@
 import { FiMail, FiLock } from 'react-icons/fi';
-import { Link } from 'react-router-dom';
 
 import { Input } from '../../components/Input';
 import { Button } from '../../components/Button';
-
-import { Container, Form, Background, TimbirasProfile, SemusProfile } from './styles';
+import { Container, Form, Background } from './styles'; 
+import { Link } from 'react-router-dom';
 
 
 export function SignIn() {
@@ -12,7 +11,7 @@ export function SignIn() {
         <Container>
             <Form>
                 
-                <h2>Faça seu login</h2>
+                <h1>Faça seu login</h1>
 
                 <Input
                     placeholder="E-mail"
@@ -26,17 +25,16 @@ export function SignIn() {
                     icon={FiLock}
                 />
 
-                <Button title="Entrar" /> 
+                <Button title= "Entrar" /> 
 
                 <Link to="/register">
                     Criar conta
-                </Link>    
+                </Link>
             </Form>
             
-            <Background>
-                <TimbirasProfile> </TimbirasProfile>
-                <SemusProfile> </SemusProfile>
-            </Background>
+            <Background />
+          
+           
         </Container>
     );
 }

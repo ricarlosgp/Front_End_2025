@@ -10,7 +10,7 @@ export const Container = styled.div`
 `;
 
 export const Form = styled.form`
-    
+    position: relative;
     padding: 0 136px;
 
     display: flex;
@@ -21,55 +21,44 @@ export const Form = styled.form`
     text-align: center;
 
     > h2 { //Crie sua conta
-        font-size: 24px;
-        margin: 14px 0;
-        color: ${({ theme }) => theme.COLORS.BANDEIRA};
+        font-size: 48px;
+        color: ${({ theme }) => theme.COLORS.PEC};
+        padding-bottom: 13px;
         
     }    
 
     > a {//Voltar para o Login
         margin-top: 20px;
-        color: ${({ theme }) => theme.COLORS.BANDEIRA};
-        font-family: "Raleway", sans-serif;
-        font-weight: 700;
+        color: ${({ theme }) => theme.COLORS.PEC};
         
     }        
-    `;
+`;
 
 export const Background = styled.div`
-    flex: 1;
+    flex:1;
     background: url(${jalecoImg}) no-repeat center center;
     background-size: cover;
-    position: relative;
 `;
 
-export const TimbirasProfile = styled.div`
-    background: url(${timbirasImg}) no-repeat center center;
-    background-size: contain;  // Ajuste para "cover" ou "contain" conforme necessário
-    position: absolute;
-    top: 86%;
-    left: 125%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    width: 200px;  
-    height: 200px; 
-    
-`;
-
-export const SemusProfile = styled.div`
+export const Background_semus = styled.div`    
+    position: absolute; 
+    top: 40px;
+    left: 150px;
     background: url(${semusImg}) no-repeat center center;
-    background-size: contain;  // Ajuste para "cover" ou "contain" conforme necessário
-    position: absolute;
-    top: 15%;
-    left: 125%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    width: 300px;  // Ajuste a largura conforme necessário
-    height: 300px; // Ajuste a altura conforme necessário
-    
+    background-size: cover;
+    width: 270px;  
+    height: 70px;         
+`;
+
+export const Background_timbiras = styled.div`    
+    position: absolute; 
+    top: 600px;
+    left:150px;
+    background: url(${timbirasImg}) no-repeat center center;
+    background-size: cover;
+    width: 270px;  
+    height: 120px;
+    z-index: 1;     
+      
 `;
 

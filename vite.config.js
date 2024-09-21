@@ -8,3 +8,5 @@ export default defineConfig({
     port: 3333 // Mude para a porta desejada
 }
 });
+
+//inseri a porta 3333

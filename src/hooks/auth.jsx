@@ -1,9 +1,11 @@
+/* eslint-disable react/prop-types */
 import { createContext, useContext } from 'react';
 import { api } from '../services/api';
 
 export const AuthContext = createContext({});
 
-function AuthProvider({ children}) {  
+
+function AuthProvider({ children }) {  
     async function signIn({ email, password }) {
         try {
             const response = await api.post("/sessions", { email, password });

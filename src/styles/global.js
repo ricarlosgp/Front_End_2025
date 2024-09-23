@@ -11,6 +11,7 @@ export default createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
     }
+    
     body {
         background-color: ${({ theme }) => theme.COLORS.WHIT}; 
         color: ${({ theme }) => theme.COLORS.WHITE}; 
@@ -28,4 +29,3 @@ export default createGlobalStyle`
     button:hover, a:hover { filter: brightness(0,9); } 
 
 `;
-

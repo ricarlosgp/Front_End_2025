@@ -1,15 +1,24 @@
-/* eslint-disable react/prop-types */
-import { createContext, useContext } from 'react';
+import { createContext, useContext, useState, useEffect } from 'react';
+
 import { api } from '../services/api';
 
 export const AuthContext = createContext({});
 
+// eslint-disable-next-line react/prop-types
+function AuthProvider({ children }) { 
+    const [data, setData] = useState({});
 
-function AuthProvider({ children }) {  
-    async function signIn({ email, password }) {
+    async function signIn({ email, password }) {        
         try {
             const response = await api.post("/sessions", { email, password });
-            console.log(response);
+            const { user, token } = response.data;
+            localStorage.setItem("@login:user", JSON.stringify(user));
+            localStorage.setItem("@login:token", token);
+
+            api.defaults.headers.authorization = `Bearer ${token}`;
+            setData({ user, token})
+
+
         } catch (error) {
             if (error.response) {
                 alert(error.response.data.message);
@@ -19,8 +28,23 @@ function AuthProvider({ children }) {
         }
     }
 
+    useEffect(() => {
+        const token = localStorage.getItem("@login:token, token");
+        const user = localStorage.getItem("@login:token, user");
+
+        if(token && user) {
+            api.defaults.headers.authorization = `Bearer ${token}`;
+
+            setData({
+                token,
+                user: JSON.parse(user)
+            });
+        }
+    }, []);
+
+    
     return (
-        <AuthContext.Provider value={{ signIn }}>
+        <AuthContext.Provider value={{ signIn, user: data.user }}>
             {children}
         </AuthContext.Provider>
     );
@@ -28,9 +52,7 @@ function AuthProvider({ children }) {
 
 function useAuth() {
     const context = useContext(AuthContext);
-    if (!context) {
-        throw new Error("useAuth deve ser usado dentro de um AuthProvider");
-    }
+    
     return context;
 }
 

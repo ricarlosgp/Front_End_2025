@@ -32,7 +32,7 @@ export const Form = styled.form`
   }
 `;
 
-export const Background = styled.div`
+export const Background_jaleco = styled.div`
   flex: 1;
   background: url(${jalecoImg}) no-repeat center center;
   background-size: cover;

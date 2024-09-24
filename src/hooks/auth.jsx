@@ -4,6 +4,7 @@ import { api } from '../services/api';
 
 export const AuthContext = createContext({});
 
+
 // eslint-disable-next-line react/prop-types
 function AuthProvider({ children }) { 
     const [data, setData] = useState({});
@@ -28,6 +29,13 @@ function AuthProvider({ children }) {
         }
     }
 
+    function signOut() {
+        localStorage.removeItem("@login:token, token");
+        localStorage.removeItem("@login:token, user");
+
+        setData({});
+    }
+
     useEffect(() => {
         const token = localStorage.getItem("@login:token, token");
         const user = localStorage.getItem("@login:token, user");
@@ -44,7 +52,12 @@ function AuthProvider({ children }) {
 
     
     return (
-        <AuthContext.Provider value={{ signIn, user: data.user }}>
+        <AuthContext.Provider value={{ 
+            signIn,
+            signOut,
+            user: data.user,
+        }}
+        >
             {children}
         </AuthContext.Provider>
     );

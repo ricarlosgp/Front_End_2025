@@ -7,7 +7,7 @@ import { useAuth } from '../../hooks/auth';
 import { Input } from '../../components/Input';
 import { Button } from '../../components/Button';
 
-import { Container, Form, Background, Background_semus, Background_timbiras } from './styles'; 
+import { Container, Form, Background_jaleco, Background_semus, Background_timbiras } from './styles'; 
 
 export function SignIn() {
     const [email, setEmail] = useState("");
@@ -22,10 +22,10 @@ export function SignIn() {
 
     return (
         <Container>
-            <Background_semus/>
+            
             <Form>
             
-            
+                <Background_semus/>
                 <h1>Faça seu login</h1>
 
                 <Input
@@ -48,10 +48,10 @@ export function SignIn() {
                     Criar conta
                 </Link>
                 
-            </Form>
             <Background_timbiras/>
+            </Form>
             
-            <Background />
+            <Background_jaleco />
           
            
         </Container>

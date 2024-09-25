@@ -25,8 +25,7 @@ export function Profile() {
                     </label>                 
                 </FiCameraProfile>
             </Avatar>
-            <Form>        
-                    
+            <Form>                       
                 
                 <Input
                     placeholder="Nome"

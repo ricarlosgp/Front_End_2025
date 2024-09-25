@@ -11,7 +11,6 @@ export function Header() {
 
                 <div>
                     <span>PREFEITURA MUNICIPAL DE TIMBIRAS-MA</span>
-                    <strong>UBS SÃO RAIMUNDO I</strong>
                     <strong>ESCALA DE TRABALHO</strong>
                 </div>
             </Profile>

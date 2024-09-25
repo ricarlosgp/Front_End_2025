@@ -1,28 +1,24 @@
-import { Container, Menu, UBS, Content, ProfileJan, ProfileFev, ProfileMar, ProfileAbr, ProfileMai, ProfileJun, ProfileJul, ProfileAgo, ProfileSet, ProfileOut, ProfileNov, ProfileDez  } from './styles';
+import { Container, Menu, UBS, Content, } from './styles';
 import { Header } from '../../components/Header';
 import { ButtonText } from '../../components/ButtonText';
 export function Home() {
     return (
         <Container>
             <Header />
-            <Menu>
-                <ProfileJan/> <ProfileFev/> <ProfileMar/>
-                <ProfileAbr/> <ProfileMai/> <ProfileJun/>
-                <ProfileJul/> <ProfileAgo/>  <ProfileSet/>
-                <ProfileOut/> <ProfileNov/>  <ProfileDez/>
-                        
-                <li><ButtonText title="JAN" /></li>                
-                <li><ButtonText title="FEV" /></li>
-                <li><ButtonText title="MAR" /></li>
-                <li><ButtonText title="ABR" /></li>
-                <li><ButtonText title="MAI" /></li>
-                <li><ButtonText title="JUN" /></li>
-                <li><ButtonText title="JUL" /></li>
-                <li><ButtonText title="AGO" /></li>
-                <li><ButtonText title="SET" /></li>
-                <li><ButtonText title="OUT" /></li>
-                <li><ButtonText title="NOV" /></li>
-                <li><ButtonText title="DEZ" /></li>
+            <Menu>                
+                <li className="jan"><ButtonText title="JAN" /></li>
+                <li className="fev"><ButtonText title="FEV" /></li>
+                <li className="mar"><ButtonText title="MAR" /></li>
+                <li className="abr"><ButtonText title="ABR" /></li>
+                <li className="mai"><ButtonText title="MAI" /></li>
+                <li className="jun"><ButtonText title="JUN" /></li>
+                <li className="jul"><ButtonText title="JUL" /></li>
+                <li className="ago"><ButtonText title="AGO" /></li>
+                <li className="set"><ButtonText title="SET" /></li>
+                <li className="out"><ButtonText title="OUT" /></li>
+                <li className="nov"><ButtonText title="NOV" /></li>
+                <li className="dez"><ButtonText title="DEZ" /></li>      
+                
             </Menu>
 
             <Content>

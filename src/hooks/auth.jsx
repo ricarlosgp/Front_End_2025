@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { createContext, useContext, useState, useEffect } from 'react';
 
 import { api } from '../services/api';
@@ -5,21 +6,20 @@ import { api } from '../services/api';
 export const AuthContext = createContext({});
 
 
-// eslint-disable-next-line react/prop-types
 function AuthProvider({ children }) { 
     const [data, setData] = useState({});
 
     async function signIn({ email, password }) {        
         try {
             const response = await api.post("/sessions", { email, password });
-            const { user, token } = response.data;
+            const { token, user } = response.data;
+
             localStorage.setItem("@login:user", JSON.stringify(user));
             localStorage.setItem("@login:token", token);
 
-            api.defaults.headers.authorization = `Bearer ${token}`;
-            setData({ user, token})
+            api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
 
-
+            setData({ token, user });
         } catch (error) {
             if (error.response) {
                 alert(error.response.data.message);
@@ -41,7 +41,7 @@ function AuthProvider({ children }) {
         const user = localStorage.getItem("@login:token, user");
 
         if(token && user) {
-            api.defaults.headers.authorization = `Bearer ${token}`;
+            api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
 
             setData({
                 token,
@@ -69,4 +69,5 @@ function useAuth() {
     return context;
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export { AuthProvider, useAuth };

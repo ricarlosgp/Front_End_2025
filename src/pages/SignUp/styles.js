@@ -26,6 +26,7 @@ export const Form = styled.form`
     font-size: 28px;
     color: ${({ theme }) => theme.COLORS.PEC};
     padding-bottom: 9px;
+    font-family: "IBM Plex Sans", sans-serif; 
   }
 
   > a {

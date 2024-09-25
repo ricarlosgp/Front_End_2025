@@ -24,11 +24,13 @@ export const Form = styled.form`
     font-size: 28px;
     color: ${({ theme }) => theme.COLORS.PEC};
     padding-bottom: 13px;
+    font-family: "IBM Plex Sans", sans-serif; 
   }
 
   > a {
     margin-top: 20px;
     color: ${({ theme }) => theme.COLORS.PEC};
+    font-family: "IBM Plex Sans", sans-serif; 
   }
 `;
 

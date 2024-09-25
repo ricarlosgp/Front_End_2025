@@ -1,12 +1,11 @@
 import styled from "styled-components";
-import theme from "../../styles/theme";
 import semusImg from '../../images/semus.png';
 
 export const Container = styled.header`
-    background-color: ${({ theme })=> theme.COLORS.BACKGROUND_800};
+    background-color: ${({ theme })=> theme.COLORS.PEC};
     grid-area: header;
 
-    height: 105px;
+    height: 50px;
     width: 100%;
 
     border-bottom-width: 1px;
@@ -30,17 +29,20 @@ export const Profile = styled.div`
         flex-direction: column;
         margin-left: 190px;
         line-height: 24px;
+       
         
         span {
-            font-size: 18px;
+            font-size: 20px;
             color: ${({ theme  }) => theme.COLORS.WHITE};     
-            font-weight: bold;   
+            font-weight: bold; 
+            font-family: "IBM Plex Sans", sans-serif;  
         }
 
         strong {
-            font-size: 18px;
+            font-size: 15px;
             color: ${({ theme }) => theme.COLORS.WHITE};
             font-weight: bold;
+            font-family: "IBM Plex Sans", sans-serif;  
         }
 
     }
@@ -50,11 +52,11 @@ export const SemusProfile = styled.div`
     background: url(${semusImg}) no-repeat center center;
     background-size: contain;  
     position: absolute;
-    margin-top:5%;
-    left: -4%;
+    margin-top:10%;
+    left: -7%;
     transform: translate(-50%, -50%);
-    width: 235px; 
-    height: 86px; 
+    width: 135px; 
+    height: 135px; 
     
 `;
 
@@ -63,7 +65,7 @@ export const Logout = styled.button`
     background: none;
     
     > svg {
-        color: ${({ them }) => theme.COLORS.GRAY_100};
+        color: ${({ theme }) => theme.COLORS.GRAY_100};
         font-size: 24px;
     }
 

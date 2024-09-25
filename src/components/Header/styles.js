@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import semusImg from '../../images/semus.png';
+import { Link } from 'react-router-dom';
 
 export const Container = styled.header`
     background-color: ${({ theme }) => theme.COLORS.PEC};
@@ -16,7 +17,7 @@ export const Container = styled.header`
     padding: 0 80px;
 `;
 
-export const Profile = styled.div`
+export const Profile = styled(Link)`
     display: flex;
     align-items: center;
 
@@ -26,14 +27,14 @@ export const Profile = styled.div`
         margin-left: 190px;
         line-height: 24px;
         
-        span {
+        h1 {
             font-size: 15px;
             color: ${({ theme }) => theme.COLORS.WHITE};     
             font-weight: bold; 
             font-family: "IBM Plex Sans", sans-serif;  
         }
 
-        strong {
+        h3 {
             font-size: 15px;
             color: ${({ theme }) => theme.COLORS.WHITE};
             font-weight: bold;
@@ -60,7 +61,7 @@ export const Logout = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: -500px;
+    margin-left: -450px;
 
     > svg {
         color: ${({ theme }) => theme.COLORS.WHITE};

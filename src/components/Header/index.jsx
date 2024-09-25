@@ -1,14 +1,15 @@
-import { RiDoorOpenFill, RiLockPasswordLine } from 'react-icons/ri'; // Adicionando o ícone para "Alterar Senha"
+import { RiDoorOpenFill, RiLockPasswordLine } from 'react-icons/ri';
 import { useAuth } from '../../hooks/auth';
-import { Container, Profile, SemusProfile, Logout, ChangePasswordButton } from './styles'; // Certifique-se de que `ChangePasswordButton` está estilizado em `./styles`
+import { useNavigate } from 'react-router-dom'; // Importando useNavigate
+import { Container, Profile, SemusProfile, Logout, ChangePasswordButton } from './styles';
 
 export function Header() {
     const { signOut } = useAuth();
+    const navigate = useNavigate(); // Usando useNavigate para redirecionamento
 
-    // Função fictícia para lidar com a mudança de senha
     const handleChangePassword = () => {
-        console.log('Alterar senha');
-        // Aqui você pode abrir um modal, redirecionar ou executar a lógica de alteração de senha
+        // Redireciona para a página de perfil
+        navigate('/profile'); // Ajuste a rota conforme necessário
     };
 
     return (
@@ -17,21 +18,19 @@ export function Header() {
                 <SemusProfile></SemusProfile>
 
                 <div>
-                    <span>PREFEITURA MUNICIPAL DE TIMBIRAS-MA</span>
-                    <strong>ESCALA DE TRABALHO</strong>
+                    <h1>PREFEITURA MUNICIPAL DE TIMBIRAS-MA</h1>
+                    <h3>ESCALA DE TRABALHO</h3>
                 </div>
             </Profile>
 
-            {/* Botão para Alterar Senha */}
             <ChangePasswordButton onClick={handleChangePassword}>
                 <RiLockPasswordLine />
-                <span>Alterar Senha</span> {/* Texto exibido ao passar o mouse */}
+                <span>Alterar Senha</span>
             </ChangePasswordButton>
 
-            {/* Botão de Logout */}
             <Logout onClick={signOut}>
                 <RiDoorOpenFill />
-                <span>Sair</span> {/* Texto exibido ao passar o mouse */}
+                <span>Sair</span>
             </Logout>
         </Container>
     );

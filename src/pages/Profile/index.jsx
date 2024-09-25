@@ -1,4 +1,5 @@
-import { FiArrowLeft, FiUser, FiMail, FiLock, FiCamera } from 'react-icons/fi';
+import { FiUser, FiMail, FiLock, FiCamera } from 'react-icons/fi';
+import { RiDoorOpenFill } from 'react-icons/ri';
 import { Input } from '../../components/Input';
 import { Button } from '../../components/Button';
 import { Container, Form, Avatar, SemusProfile,FiCameraProfile} from './styles';
@@ -8,7 +9,8 @@ export function Profile() {
         <Container>
             <header>
                 <a href="/">
-                    <FiArrowLeft/>            
+                <RiDoorOpenFill />
+                    <span>Sair</span>
                 </a>
             </header>
             <SemusProfile></SemusProfile> 

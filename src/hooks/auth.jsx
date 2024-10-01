@@ -17,7 +17,8 @@ function AuthProvider({ children }) {
         localStorage.setItem("@login:user", JSON.stringify(user));
         localStorage.setItem("@login:token", token);
 
-        api.defaults.headers.authorization = 'Bearer ${token}';
+        api.defaults.headers.common['Authorization']= 'Bearer ${token}';
+
         setData({ user, token });
 
 
@@ -44,7 +45,7 @@ function AuthProvider({ children }) {
         const user = localStorage.getItem("@login:user");
 
         if(token && user) {
-            api.defaults.headers.authorization = `Bearer ${token}`;
+            api.defaults.headers.common['Authorization']= 'Bearer ${token}';
 
             setData({
                 token,

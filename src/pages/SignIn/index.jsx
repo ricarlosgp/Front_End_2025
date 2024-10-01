@@ -12,14 +12,12 @@ import { Container, Form, Background_jaleco, Background_semus, Background_timbir
 export function SignIn() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+        
+    const { signIn } = useAuth();
     
-    const {signIn} = useAuth();
-
-    function handleSignIn(){
-        console.log("Tentando fazer login com:", { email, password });
-        signIn({ email, password });
+    function handleSignIn() {
+        signIn({ email, password });        
     }
-
     return (
         <Container>
             

@@ -7,6 +7,5 @@ export const Container = styled.button`
     border: none;
     font-size: 19px;
     font-weight: 700; 
-    //border-bottom: 3px solid red;    
-
+       
 `;

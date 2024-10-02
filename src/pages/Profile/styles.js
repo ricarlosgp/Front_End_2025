@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import semusImg from '../../images/semus.png';
 
 export const Container = styled.div`
     width: 100%; 
@@ -7,93 +6,69 @@ export const Container = styled.div`
     > header {
         width: 100%; 
         height: 144px;    
+        
         background: ${({ theme }) => theme.COLORS.PEC};
         
         display: flex;
         align-items: center;
 
-        padding: 0 100px;
+        padding: 0 200px;
 
-        a {
-            position: relative;
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-
-            svg {
-                color: ${({ theme }) => theme.COLORS.WHITE};
-                font-size: 34px;
-            }
-
-            span {
-                position: absolute;
-                top: -20px; /* Ajuste a posição do texto acima do ícone */
-                left: 50%; /* Centraliza o texto */
-                transform: translateX(-50%);
-                font-size: 20px;
-                color: ${({ theme }) => theme.COLORS.WHITE};
-                visibility: hidden;
-                opacity: 0;
-                transition: opacity 0.3s ease-in-out;
-            }
-
-            &:hover span {
-                visibility: visible;
-                opacity: 1;
-            }
-        }
+        svg {
+            color: ${({ theme }) => theme.COLORS.ORANGE};
+            font-size: 34px;
+        }                   
     }
 `;
 
 export const Form = styled.form`
     max-width: 340px;
-    margin: -30px auto 0;
-        
-    > div:nth-child(3) {
-        margin-top: 30px;
+    margin: 0 auto 0;
+
+    > div:nth-child(4){
+        margin-top: 20px;
     }
 `;
 
 export const Avatar = styled.div`
     position: relative;
-    margin-top: 6%;
-`;
+    margin: -124px auto 32px;
 
-export const SemusProfile = styled.div`
-    background: url(${semusImg}) no-repeat center center;
-    background-size: contain;  
-    position: absolute;
-    margin-top: -1%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 300px; 
-    height: 100px;
-`;
+    width: 186px;
+    height: 186px;
 
-export const FiCameraProfile = styled.div`
-    width: 38px;
-    height: 34px;
-
-    background-color: ${({ theme }) => theme.COLORS.SEMUS2};
-    border-radius: 50%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    position: absolute;
-    right: 41%;
-    margin-top: -6%;  
-    
-    input {
-        display: none;     
-        cursor: pointer;
-    }   
-        
-    svg {
-        color: ${({ theme }) => theme.COLORS.WHITE};
-        cursor: pointer;
-        width: 28px;
-        height: 28px;        
+    > img{
+        border-radius: 50%;
+        width: 186px;
+        height: 186px;    
     }
+
+    > label {
+        width: 48px;
+        height: 48px;
+
+        background-color: ${({ theme }) => theme.COLORS.ORANGE};
+        border-radius: 50%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: absolute;
+        bottom: 7px;
+        right: 7px;
+
+        cursor: pointer;
+
+        input {
+            display: none;
+        }
+
+        svg {
+            width: 20px;
+            height: 20px;
+            color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
+        }
+    }
+
 `;

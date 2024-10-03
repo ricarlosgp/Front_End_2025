@@ -1,5 +1,8 @@
 import axios from "axios";
 
 export const api = axios.create({
-  baseURL: "http://localhost:3334",
+  baseURL: "https://back-end-2025.onrender.com",
 });
+
+
+// antes do deploy do back_end: baseURL: "http://localhost:3334",

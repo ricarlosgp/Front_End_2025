@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { FiArrowLeft, FiUser, FiMail, FiLock, FiCamera } from 'react-icons/fi';
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 
 import { useAuth } from '../../hooks/auth';
 
@@ -25,13 +25,17 @@ export function Profile() {
     const [avatarFile, setAvatarFile] = useState(null);
 
     async function handleUpdate() {
-        const user = {
+        const updated = {
             name,
             email,
             password: passwordNew,
             old_password: passwordOld,
-        }
-        await updateProfile({ user, avatarFile });
+        };
+
+        const userUpdated = Object.assign(user, updated);
+        
+
+        await updateProfile({ user: userUpdated, avatarFile });
     }
 
     function handleChangeAvatar(event){

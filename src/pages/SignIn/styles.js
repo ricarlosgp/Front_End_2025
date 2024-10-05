@@ -4,58 +4,70 @@ import semusImg from "../../images/semus.png";
 import timbirasImg from "../../images/timbiras.png";
 
 export const Container = styled.div`
-  height: 100vh;
   display: flex;
   align-items: stretch;
+  height: 100vh;  
 `;
 
 export const Form = styled.form`
-  position: relative;
-  padding: 0 136px;
-  margin-top: -39px;
-
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  align-items: center; /* Centraliza itens horizontalmente */
+  justify-content: center; /* Centraliza itens verticalmente */
+  padding: 3rem;
+  width: auto; /* Largura do form */
+  height: 680px; /* Altura fixa para o form */
+  margin: 20px 140px auto;
 
-  > h1 {
-    font-size: 28px;
-    color: ${({ theme }) => theme.COLORS.PEC};
-    padding-bottom: 13px;
-    font-family: "IBM Plex Sans", sans-serif; 
-  }
+  .texto {
+    display: flex; /* Usar flexbox para centralizar */
+    flex-direction: column; /* Direção vertical dos itens */
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    width: 100%; /* Largura total para preencher o espaço */
+    padding: 20px; /* Espaçamento interno, se necessário */
+    //margin-bottom: 20px; /* Espaço abaixo da mensagem */   
+  
+    > h1 {
+      background: none;
+      color: ${({ theme }) => theme.COLORS.PEC }; 
+      border: none;
+      font-size: 19px;
+      font-weight: 700;
+      padding-bottom: 20px; 
+      padding-top: 50px;
+    }
 
-  > a {
-    margin-top: 20px;
-    color: ${({ theme }) => theme.COLORS.PEC};
-    font-family: "IBM Plex Sans", sans-serif; 
+    > a {
+      background: none;
+      color: ${({ theme }) => theme.COLORS.PEC }; 
+      border: none;
+      font-size: 20px;
+      font-weight: 700;
+      padding-top: 20px;
+      padding-bottom: 50px;
+    }
   }
+`;
+
+export const Background_semus = styled.div`
+  background: url(${semusImg}) no-repeat center center;
+  background-size: cover;
+  width: 230px;
+  height: 60px;
+  
+`;
+
+export const Background_timbiras = styled.div`
+  background: url(${timbirasImg}) no-repeat center center;
+  background-size: cover;
+  width: 130px;
+  height: 80px;
+  left: auto;
 `;
 
 export const Background_jaleco = styled.div`
   flex: 1;
   background: url(${jalecoImg}) no-repeat center center;
   background-size: cover;
-`;
-
-export const Background_semus = styled.div`
-  position: fixed;
-  top: 20px;
-  left: 150px;
-  background: url(${semusImg}) no-repeat center center;
-  background-size: cover;
-  width: 270px;
-  height: 70px;
-`;
-
-export const Background_timbiras = styled.div`
-  position: fixed;
-  top: 470px;
-  left: 150px;
-  background: url(${timbirasImg}) no-repeat center center;
-  background-size: cover;
-  width: 270px;
-  height: 120px;
 `;

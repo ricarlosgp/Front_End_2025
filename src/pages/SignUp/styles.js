@@ -5,60 +5,68 @@ import semusImg from "../../images/semus.png";
 
 export const Container = styled.div`
   display: flex;
-  height: 100vh;
   align-items: stretch;
+  height: 100vh;
 `;
 
 export const Form = styled.form`
-  position: relative;
-  padding: 0 136px;
-
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  align-items: center; /* Centraliza itens horizontalmente */
+  justify-content: center; /* Centraliza itens verticalmente */
+  padding: 3rem;
+  width: auto; /* Largura do form */
+  height: 680px; /* Altura fixa para o form */
+  margin: 20px 140px auto;
 
-  text-align: center;
+  .texto {
+    display: flex; /* Usar flexbox para centralizar */
+    flex-direction: column; /* Direção vertical dos itens */
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    width: 100%; /* Largura total para preencher o espaço */
+    padding: 20px; /* Espaçamento interno, se necessário */
+    //margin-bottom: 20px; /* Espaço abaixo da mensagem */
 
-  > h2 {
-    //Crie sua conta
-    margin-top: -30px;
-    font-size: 28px;
-    color: ${({ theme }) => theme.COLORS.PEC};
-    padding-bottom: 9px;
-    font-family: "IBM Plex Sans", sans-serif; 
+    > h1 {
+      background: none;
+      color: ${({ theme }) => theme.COLORS.PEC};
+      border: none;
+      font-size: 20px;
+      font-weight: 700;
+      padding-bottom: 20px;
+      padding-top: 30px;
+    }
+
+    > a {
+      background: none;
+      color: ${({ theme }) => theme.COLORS.PEC};
+      border: none;
+      font-size: 20px;
+      font-weight: 700;
+      padding-top: 20px;
+      padding-bottom: 50px;
+    }
   }
-
-  > a {
-    //Voltar para o Login
-    margin-top: 20px;
-    color: ${({ theme }) => theme.COLORS.PEC};
-  }
-`;
-
-export const Background = styled.div`
-  flex: 1;
-  background: url(${jalecoImg}) no-repeat center center;
-  background-size: cover;
 `;
 
 export const Background_semus = styled.div`
-  position: absolute;
-  top: 20px;
-  left: 150px;
   background: url(${semusImg}) no-repeat center center;
   background-size: cover;
-  width: 270px;
-  height: 70px;
+  width: 230px;
+  height: 60px;
 `;
 
 export const Background_timbiras = styled.div`
-  position: absolute;
-  top: 470px;
-  left: 150px;
   background: url(${timbirasImg}) no-repeat center center;
   background-size: cover;
-  width: 270px;
-  height: 120px;
-  
+  width: 130px;
+  height: 80px;
+  left: auto;
+`;
+
+export const Background_jaleco = styled.div`
+  flex: 1;
+  background: url(${jalecoImg}) no-repeat center center;
+  background-size: cover;
 `;

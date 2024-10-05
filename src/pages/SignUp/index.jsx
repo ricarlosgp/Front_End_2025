@@ -7,7 +7,7 @@ import { api } from '../../services/api'
 import { Input } from '../../components/Input';
 import { Button } from '../../components/Button';
 
-import { Container, Form, Background, Background_semus, Background_timbiras } from './styles';
+import { Container, Form, Background_jaleco, Background_semus, Background_timbiras } from './styles';
 
 export function SignUp() {
     const [name, setName] = useState("");
@@ -37,11 +37,12 @@ export function SignUp() {
 }
     return (
         <Container>
-            <Background />
+            <Background_jaleco />
 
             <Form>
                 <Background_semus />
-                <h2>Crie sua conta</h2>
+                <div className="texto">
+                <h1>Crie sua conta</h1>
 
                 <Input
                     placeholder="Name"
@@ -69,6 +70,7 @@ export function SignUp() {
                 <Link to="/">
                     Voltar para o login
                 </Link>
+                </div>
                 <Background_timbiras />
             </Form>
         </Container>

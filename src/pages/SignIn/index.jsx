@@ -20,10 +20,11 @@ export function SignIn() {
     }
     return (
         <Container>
-            
             <Form>
-            
                 <Background_semus/>
+
+                <div className="texto">
+                           
                 <h1>Faça seu login</h1>
 
                 <Input
@@ -45,8 +46,9 @@ export function SignIn() {
                 <Link to="/register">
                     Criar conta
                 </Link>
-                
-            <Background_timbiras/>
+            </div>
+                <Background_timbiras/>                
+            
             </Form>
             
             <Background_jaleco />

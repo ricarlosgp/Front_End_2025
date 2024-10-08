@@ -7,11 +7,7 @@ export const Container = styled.div`
   display: flex;
   align-items: stretch;
   height: 100vh;
-
-  @media (min-width: 320px) and (max-width: 480px) {
-    display: flex;
-    height: 100vh;
-  }
+  
 `;
 
 export const Form = styled.form`
@@ -25,10 +21,7 @@ export const Form = styled.form`
   height: auto;
   margin: 0 auto;
 
-  @media (min-width: 320px) and (max-width: 480px) {
-    height: 100vh;
-    width: 300px;
-  };
+  
 
   .texto {
     display: flex;
@@ -57,7 +50,7 @@ export const Form = styled.form`
       padding-top: 10px;
       padding-bottom: 30px;
     }
-  }    
+  }
 `;
 
 export const Background_semus = styled.div`
@@ -65,7 +58,6 @@ export const Background_semus = styled.div`
   background-size: contain; /* Mudar de cover para contain para ajustar ao tamanho */
   width: 150px; /* Reduzindo o tamanho da imagem */
   height: 40px;
-
 `;
 
 export const Background_timbiras = styled.div`
@@ -73,14 +65,11 @@ export const Background_timbiras = styled.div`
   background-size: contain;
   width: 100px;
   height: 60px;
- 
 `;
 
 export const Background_jaleco = styled.div`
   flex: 1;
   background: url(${jalecoImg}) no-repeat center center;
   background-size: cover;
-  height: 100%; /* Mantém o background preenchendo toda a altura */
-  
+  height: 100%; 
 `;
-

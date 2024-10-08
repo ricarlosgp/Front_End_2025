@@ -52,7 +52,7 @@ export const Menu = styled.ul`
 // Estilização do UBS
 export const UBS = styled.div`
     grid-area: ubs;
-    background: violet;
+    //background: violet;
     height: 50px;
     text-align: center;
     font-size: 12px;
@@ -72,5 +72,5 @@ export const UBS = styled.div`
 // Estilização do Content
 export const Content = styled.div`
     grid-area: content;
-    background: blue;
+    //background: blue;
 `;

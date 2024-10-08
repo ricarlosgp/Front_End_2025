@@ -24,10 +24,11 @@ export function Home() {
             <Content>
 
             <UBS>
-                <h1>UNIDADE BÁSICA DE SAÚDE SÃO RAIMUNDO I</h1>
-                <strong>CNES: 7179553</strong>
+                <h1>RICARLOS GUIMARÃES PEREIRA RIBEIRO</h1>
+                <strong>(99)981192156</strong><br></br>
+                E-mail: ricarlosgp@gmail.com
             </UBS>
-            
+           
                 
             </Content>
         </Container>

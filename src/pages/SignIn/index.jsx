@@ -5,7 +5,7 @@ import { useAuth } from '../../hooks/auth';
 import { Input } from '../../components/Input';
 import { Button } from '../../components/Button';
 
-import { Container, Form, Background_jaleco, Background_semus, Background_timbiras } from './styles'; 
+import { Container, Form, Background_abertura, Background_semus, Background_timbiras } from './styles'; 
 
 export function SignIn() {
     const [email, setEmail] = useState("");
@@ -43,7 +43,7 @@ export function SignIn() {
                 <Background_timbiras/>                
             
             </Form>            
-            <Background_jaleco />        
+            <Background_abertura />        
            
         </Container>
     );

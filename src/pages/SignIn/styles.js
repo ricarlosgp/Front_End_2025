@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import jalecoImg from "../../images/jaleco.jpg";
+import aberturaImg from "../../images/abertura.jpg";
 import semusImg from "../../images/semus.png";
 import timbirasImg from "../../images/timbiras.png";
 //estilizando container
@@ -115,9 +115,9 @@ export const Background_timbiras = styled.div`
   } 
 `;
 
-export const Background_jaleco = styled.div`
+export const Background_abertura = styled.div`
   flex: 1;
-  background: url(${jalecoImg}) no-repeat center center;
+  background: url(${aberturaImg}) no-repeat center center;
   background-size: cover;
   height: 100vdh;
   

@@ -114,11 +114,11 @@ export const Main = styled.div`
       //border: 5px solid red;
     }
     //VERTICAL SEMUS - DESKTOP
-    @media screen and (min-width: 950px)  {
+    @media screen and (min-width: 950px) and (orientation: landscape)  {
       width: 500px;
       height: 150px;      
       margin: 40px auto 50px;
-      border: 5px solid red;
+      border: 5px solid green;
     }
   }
 

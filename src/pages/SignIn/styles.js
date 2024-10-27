@@ -66,7 +66,7 @@ export const Main = styled.div`
   }
 
   @media (min-width: 751px) and (orientation: landscape) {
-    width: 300px;
+    width: 400px;
     margin: 0;
     padding: 5px;
     display: flex;

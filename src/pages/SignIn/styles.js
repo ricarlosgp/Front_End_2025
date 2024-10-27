@@ -118,7 +118,7 @@ export const Main = styled.div`
       width: 500px;
       height: 150px;      
       margin: 40px auto 50px;
-      //border: 5px solid red;
+      border: 5px solid red;
     }
   }
 

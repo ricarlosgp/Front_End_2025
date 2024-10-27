@@ -27,7 +27,7 @@ export function SignIn() {
                         type="text"
                         icon={FiMail}
                         onChange={e => setEmail(e.target.value)}
-                    />
+                    /> 
                     <Input
                         placeholder="Senha"
                         type="password"

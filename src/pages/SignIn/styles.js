@@ -3,14 +3,14 @@ import aberturaImg from "../../images/abertura.jpg";
 import semusImg from "../../images/semus.png";
 import timbirasImg from "../../images/timbiras.png";
 
-// Container + BackgroundImage_abertura
+// VERTICAL - Container + BackgroundImage_abertura
 export const Container = styled.div`
   display: flex;
   align-items: stretch;
   height: 100vh;
 `;
 
-// Estilos para BackgroundImage_abertura
+// VERTICAL - Estilos para BackgroundImage_abertura
 export const BackgroundImage_abertura = styled.div`
   flex: 1;
   background: url(${aberturaImg}) no-repeat center center;
@@ -18,7 +18,7 @@ export const BackgroundImage_abertura = styled.div`
   height: 100vh;
 `;
 
-//CELULAR - estilizando o Form(todo o main)
+//VERTICAL FORM - CELULAR 
 export const Form = styled.form`
   display: flex;
   flex-direction: column;
@@ -27,28 +27,45 @@ export const Form = styled.form`
   height: 100vh;
   margin: 0;
   padding: 0;
+ 
 
-  @media (orientation: landscape) {
-    width: 400px;
+  //VERTICAL - FORM
+  @media screen and (min-width:700px) {
+    width: 700px;    
   }
+
+  @media (max-width: 750px) and (orientation: landscape) {
+    width: 400px; 
+  }  
   
 `;
 
-// CELULAR
+// VERTICAL MAIN - CELULAR
 export const Main = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: auto;
   margin-bottom: auto;
-
+  
+  //VERTICAL MAIN - tablet,nb,ds
+  @media (min-width:700px) {
+    width: 650px;
+    padding: 20px;
+      
+  }  
+ // Configurações para telas menores que 700px em modo paisagem
+ @media (max-width: 750px) and (orientation: landscape) {
+    width:400px;
+    margin:0;
+    padding: 5px;
+    display:flex;
+    align-items: center;    
+    background:aqua;
+  }
   
 
- 
-
-  
-
-  /* CELULAR */
+  // VERTICAL SEMUS - CELULAR
   .image_semus {
     background: url(${semusImg}) no-repeat center center;
     background-size: contain;
@@ -56,20 +73,23 @@ export const Main = styled.div`
     height: 70px;
     margin-bottom: 20px;
     
-
-    @media (orientation: landscape) {
-      width: 150px;
-      height: 40px;
-      margin: 5px;
-    }
-
- 
-
-    //Tablet, NB,PC
-
-
+   
+    // VERTICAL SEMUS - tablet,nb,ds
+    @media screen and (min-width:700px) {
+      width: 350px;
+      height: 90px;
+      margin: 60px;       
+    } 
+    // HORIZONTAL SEMUS - celular
+    @media (max-width: 750px) and (orientation: landscape) {
+      width: 250px;
+      height: 50px;
+      margin: 2px;
+      //border:5px solid red;
+  }    
+    
   }
-
+  // VERTICAL H1 - CELULAR
   h1 {
     background: none;
     color: ${({ theme }) => theme.COLORS.PEC};
@@ -79,23 +99,57 @@ export const Main = styled.div`
     width: auto;
     height: auto;
     margin-bottom: 20px;
-
-    @media (orientation: landscape) {
-      font-size: 15px;
-      margin-bottom: 0;
+   
+    // VERTICAL H1 - tablet,nb,ds
+    @media screen and (min-width:700px) {
+      font-size: 30px;
+      margin-bottom: 40px;    
     }
-  }
 
+     // HORIZONTAL H1 - celular
+     @media (max-width: 750px) and (orientation: landscape) {
+      font-size: 20px;
+      margin-bottom: 2px; 
+    }
+    
+  }
+  //VERTICAL INPUT - tablet,nb,ds
+  input {
+       @media screen and (min-width:700px) {
+        font-size: 30px;
+        
+    }
+    //HORIZONTAL INPUT - celular
+    @media (max-width: 750px) and (orientation: landscape) {
+      height:50px; 
+      font-size: 20px;  
+      
+    } 
+  }
+  //VERTICAL BUTTON - CELULAR
   Button {
     width: 200px;
     font-size: 18px;
     margin-bottom: 20px;
+    
 
-    @media (orientation: landscape) {
-      width: 100px;
-      height: 40px;
-      font-size: 15px;
-      margin: 5px;
+    // VERTICAL BUTTON - tablet,nb,ds
+    @media screen and (min-width:700px) {
+      font-size: 25px;
+      width: 200px;
+      height: 40px;      
+      margin: 30px; 
+      display:flex;
+      align-items:center;
+      justify-content:center;      
+    }
+
+    //HORIZONTAL BUTTON - celular
+    @media (max-width: 750px) and (orientation: landscape) {
+      margin:0;
+      height:40px; 
+      font-size: 20px; 
+      
     }
   }
 
@@ -105,6 +159,7 @@ export const Main = styled.div`
     transform-origin: center;
   }
 
+  //VERTICAL A - CELULAR  
   a {
     color: ${({ theme }) => theme.COLORS.PEC};
     font-size: 18px;
@@ -113,10 +168,25 @@ export const Main = styled.div`
     width: auto;
     height: auto;
     margin-bottom: 20px;
+    
 
-    @media (orientation: landscape) {
-      font-size: 15px;
-      margin-bottom: 0;
+    // VERTICAL A - tablet,nb,ds
+    @media screen and (min-width:700px) {
+      font-size: 25px;
+      width: 200px;
+      height: 40px;      
+      margin: 20px; 
+      display:flex;
+      align-items:center;
+      justify-content:center;      
+    }
+
+    //HORIZONTAL A - celular
+    @media (max-width: 750px) and (orientation: landscape) {
+      margin:0;
+      height:40px; 
+      font-size: 20px; 
+      
     }
   }
 
@@ -126,6 +196,7 @@ export const Main = styled.div`
     transform-origin: center;
   }
 
+  //VERTICAL TIMBIRAS - celular
   .image_timbiras {
     background: url(${timbirasImg}) no-repeat center center;
     background-size: contain;
@@ -134,9 +205,18 @@ export const Main = styled.div`
     display: flex;
     text-align: center;
 
-    @media (orientation: landscape) {
-      width: 140px;
-      height: 60px;
+   
+    // VERTICAL TIMBIRAS - tablet,nb,ds
+    @media screen and (min-width:700px) {
+      width: 350px;
+      height: 150px;
+      margin: 30px;          
+    }
+    // HORIZONTAL TIMBIRAS - celular
+    @media (max-width: 750px) and (orientation: landscape) {
+      margin:0;
+      height:50px;      
+      
     }
   }
 `;

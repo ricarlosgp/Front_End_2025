@@ -8,6 +8,12 @@ export const Container = styled.div`
   display: flex;
   align-items: stretch;
   height: 100vh;
+
+  @media (min-width: 751px) and (max-width: 999px) and (orientation: landscape) {
+    
+    transform: scale(0.67); //Aplica o zoom de 65%
+    transform-origin: top left; /* Define a origem do zoom */
+  }
 `;
 
 // VERTICAL - Estilos para BackgroundImage_abertura
@@ -40,8 +46,7 @@ export const Form = styled.form`
   // VERTICAL FORM - desktop
   @media (min-width: 751px) and (max-width: 999px) and (orientation: landscape) {
     width: 400px;
-    transform: scale(0.65); //Aplica o zoom de 65%
-    transform-origin: top left; /* Define a origem do zoom */
+    
   }
 `;
 
@@ -74,16 +79,15 @@ export const Main = styled.div`
     width: 400px;
     display: flex;
     align-items: center;
-   // border: 5px solid red;
+    // border: 5px solid red;
   }
   //VERTICAL MAIN - desktop
-  @media screen and (min-width: 950px)  {
+  @media screen and (min-width: 950px) {
     width: 700px;
     display: flex;
     align-items: center;
-    //background-color: aqua;    
+    //background-color: aqua;
   }
-
 
   // VERTICAL SEMUS - CELULAR
   .image_semus {
@@ -115,9 +119,9 @@ export const Main = styled.div`
       //border: 5px solid red;
     }
     //VERTICAL SEMUS - DESKTOP
-    @media screen and (min-width: 950px) and (orientation: landscape)  {
+    @media screen and (min-width: 950px) and (orientation: landscape) {
       width: 500px;
-      height: 150px;      
+      height: 150px;
       margin: 40px auto 50px;
       //border: 5px solid green;
     }
@@ -152,8 +156,7 @@ export const Main = styled.div`
     }
 
     //VERTICAL H1 - DESKTOP
-    @media screen and (min-width: 950px)  {
-      
+    @media screen and (min-width: 950px) {
       background: none;
       color: ${({ theme }) => theme.COLORS.PEC};
       font-size: 20px;
@@ -183,14 +186,12 @@ export const Main = styled.div`
       //border: 5px solid;
     }
     //VERTICAL INPUT - desktop
-    @media screen and (min-width: 950px)  {
-      
+    @media screen and (min-width: 950px) {
       background: none;
       color: ${({ theme }) => theme.COLORS.PEC};
       font-size: 30px;
       font-weight: normal;
-      height: 60px; 
-      
+      height: 60px;
     }
   }
 
@@ -224,13 +225,11 @@ export const Main = styled.div`
       font-size: 20px;
     }
     // HORIZONTAL BUTTON - DESKTOP
-    @media screen and (min-width: 950px)  {
-           
+    @media screen and (min-width: 950px) {
       font-size: 30px;
       height: 50px;
       font-weight: 700;
-      margin: 50px auto 50px;     
-      
+      margin: 50px auto 50px;
     }
   }
 
@@ -274,8 +273,7 @@ export const Main = styled.div`
       font-size: 15px;
     }
 
-    @media screen and (min-width: 950px)  {
-      
+    @media screen and (min-width: 950px) {
       background: none;
       color: ${({ theme }) => theme.COLORS.PEC};
       font-size: 20px;
@@ -319,12 +317,11 @@ export const Main = styled.div`
     }
 
     //VERTICAL TIMBIRAS - DESKTOP
-    @media screen and (min-width: 950px)  {
+    @media screen and (min-width: 950px) {
       width: 500px;
-      height: 150px;      
+      height: 150px;
       margin: 20px auto 40px;
       //border: 5px solid red;
     }
-
   }
 `;

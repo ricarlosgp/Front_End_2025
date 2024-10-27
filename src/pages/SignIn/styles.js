@@ -70,7 +70,7 @@ export const Main = styled.div`
   @media (min-width: 751px) and (orientation: landscape) {
     width: 400px;
     margin: 0;
-    padding: 5px;
+    padding: 2px;
     display: flex;
     align-items: center;
     background: aqua;
@@ -103,7 +103,7 @@ export const Main = styled.div`
       height: 50px;
       margin-top: 5px;
       margin-bottom: 2px;
-      border: 5px solid red;
+      //border: 5px solid red;
     }
   }
   // VERTICAL H1 - CELULAR

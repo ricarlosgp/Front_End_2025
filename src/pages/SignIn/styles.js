@@ -130,8 +130,8 @@ export const Main = styled.div`
     }
 
     @media (min-width: 751px) and (orientation: landscape) {
-      font-size: 20px;
-      margin: 7px;
+      font-size: 14px;
+      margin: 0;
     }
   }
   //VERTICAL INPUT - tablet,nb,ds
@@ -249,7 +249,7 @@ export const Main = styled.div`
 
     @media (min-width: 751px) and (orientation: landscape) {
       margin: 0;
-      height: 80px;
+      height: 60px;
     }
   }
 `;

@@ -145,7 +145,7 @@ export const Main = styled.div`
       font-size: 20px;
     }
     @media (min-width: 751px) and (orientation: landscape) {
-      height: 59px;
+      height: 40px;
       font-size: 20px;
     }
   }
@@ -173,7 +173,7 @@ export const Main = styled.div`
       font-size: 20px;
     }
     @media (min-width: 751px) and (orientation: landscape) {
-      margin: 5px;
+      margin: 0;
       height: 40px;
       font-size: 20px;
     }
@@ -214,7 +214,7 @@ export const Main = styled.div`
     }
 
     @media (min-width: 751px) and (orientation: landscape) {
-      margin: 2px;
+      margin: 0;
       height: 40px;
       font-size: 15px;
     }
@@ -248,7 +248,7 @@ export const Main = styled.div`
     }
 
     @media (min-width: 751px) and (orientation: landscape) {
-      margin: 2px;
+      margin: 0;
       height: 80px;
     }
   }

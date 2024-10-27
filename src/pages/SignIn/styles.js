@@ -46,6 +46,7 @@ export const Form = styled.form`
 export const Main = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   margin-top: auto;
   margin-bottom: auto;

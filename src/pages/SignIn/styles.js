@@ -10,9 +10,10 @@ export const Container = styled.div`
   height: 100vh;
 
   @media (min-width: 751px) and (max-width: 999px) and (orientation: landscape) {
-    
-    transform: scale(0.67); //Aplica o zoom de 65%
+    transform: scale(0.67); /* Aplica o zoom de 67% */
     transform-origin: top left; /* Define a origem do zoom */
+    width: 100%; /* Para evitar que o container fique cortado após o zoom */
+    overflow: hidden; /* Para evitar barras de rolagem indesejadas */
   }
 `;
 
@@ -46,7 +47,6 @@ export const Form = styled.form`
   // VERTICAL FORM - desktop
   @media (min-width: 751px) and (max-width: 999px) and (orientation: landscape) {
     width: 400px;
-    
   }
 `;
 

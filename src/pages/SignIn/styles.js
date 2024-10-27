@@ -73,7 +73,7 @@ export const Main = styled.div`
     padding: 2px;
     display: flex;
     align-items: center;
-    background: aqua;
+    //background: aqua;
   }
 
   // VERTICAL SEMUS - CELULAR
@@ -101,7 +101,7 @@ export const Main = styled.div`
     @media (min-width: 751px) and (orientation: landscape) {
       width: 250px;
       height: 50px;
-      margin-top: 5px;
+      margin-top: 2px;
       margin-bottom: 2px;
       //border: 5px solid red;
     }

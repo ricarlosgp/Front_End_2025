@@ -38,7 +38,7 @@ export const Form = styled.form`
   }
 
   @media (min-width: 751px) and (max-width: 999px) and (orientation: landscape) {
-    width: 500px;
+    width: 400px;
   }
 `;
 
@@ -66,7 +66,7 @@ export const Main = styled.div`
   }
 
   @media (min-width: 751px) and (orientation: landscape) {
-    width: 550px;
+    width: 300px;
     margin: 0;
     padding: 5px;
     display: flex;

@@ -37,8 +37,8 @@ export const Form = styled.form`
     width: 400px;
   }
 
-  @media (min-width: 751px) and (orientation: landscape) {
-    width: 550px;
+  @media (min-width: 751px) and (max-width: 999px) and (orientation: landscape) {
+    width: 500px;
   }
 `;
 
@@ -99,8 +99,9 @@ export const Main = styled.div`
     @media (min-width: 751px) and (orientation: landscape) {
       width: 250px;
       height: 50px;
-      margin: 2px;
-      border: 5px solid red;
+      margin-top: 5px;
+      margin-bottom: 2px;
+      border: 5px solid green;
     }
   }
   // VERTICAL H1 - CELULAR
@@ -213,7 +214,7 @@ export const Main = styled.div`
     @media (min-width: 751px) and (orientation: landscape) {
       margin: 2px;
       height: 40px;
-      font-size: 20px;
+      font-size: 15px;
     }
   }
 

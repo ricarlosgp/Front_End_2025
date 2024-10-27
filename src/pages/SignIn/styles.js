@@ -40,6 +40,8 @@ export const Form = styled.form`
   // VERTICAL FORM - desktop
   @media (min-width: 751px) and (max-width: 999px) and (orientation: landscape) {
     width: 400px;
+    transform: scale(0.65); //Aplica o zoom de 65%
+    transform-origin: top left; /* Define a origem do zoom */
   }
 `;
 

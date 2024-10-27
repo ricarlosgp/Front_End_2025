@@ -83,7 +83,6 @@ export const Main = styled.div`
   }
 
 
-
   // VERTICAL SEMUS - CELULAR
   .image_semus {
     background: url(${semusImg}) no-repeat center center;
@@ -118,7 +117,7 @@ export const Main = styled.div`
       width: 500px;
       height: 150px;      
       margin: 40px auto 50px;
-      border: 5px solid green;
+      //border: 5px solid green;
     }
   }
 

@@ -2,151 +2,141 @@ import styled from "styled-components";
 import aberturaImg from "../../images/abertura.jpg";
 import semusImg from "../../images/semus.png";
 import timbirasImg from "../../images/timbiras.png";
-//estilizando container
+
+// Container + BackgroundImage_abertura
 export const Container = styled.div`
   display: flex;
   align-items: stretch;
-  height: 100dvh;
+  height: 100vh;
 `;
-//centralizando Form nos celulares e abaixo do tablet (semus, principal(h1,input,Button,link), timbiras)
+
+// Estilos para BackgroundImage_abertura
+export const BackgroundImage_abertura = styled.div`
+  flex: 1;
+  background: url(${aberturaImg}) no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+`;
+
+//CELULAR - estilizando o Form(todo o main)
 export const Form = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 290px;
-  height: 100vdh;
-  padding-top: 15px;
-  margin-top: auto;
-  margin-bottom: auto;
+  height: 100vh;
+  margin: 0;
   padding: 0;
 
-  //centralizando do tablet para cima
-  @media screen and (min-width: 400px) {
+  @media (orientation: landscape) {
     width: 400px;
-    display: flex;
-    margin-top: auto;
-    margin-bottom: auto;
   }
+  
+`;
 
-  //tablet, notebook e desktop
-  @media screen and (min-width: 700px) {
-    width: 500px;
-  }
-  //CELULAR - principal(h1,input,Button,link)
-  .principal {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 50px;
+// CELULAR
+export const Main = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: auto;
+  margin-bottom: auto;
 
-    //tablet
-    @media screen and (min-width: 600px) {
-      width: 450px;
-      height: auto;
-      padding: 0;
-    }
+  
+
+ 
+
+  
+
+  /* CELULAR */
+  .image_semus {
+    background: url(${semusImg}) no-repeat center center;
+    background-size: contain;
+    width: 200px;
+    height: 70px;
+    margin-bottom: 20px;
+    
+
     @media (orientation: landscape) {
-      //border: 5px solid red;
-      margin: 0;
-      display: flex;
-      align-content: center;
+      width: 150px;
+      height: 40px;
+      margin: 5px;
     }
+
+ 
+
+    //Tablet, NB,PC
+
+
   }
 
   h1 {
     background: none;
     color: ${({ theme }) => theme.COLORS.PEC};
-    border: none;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
-    padding-bottom: 20px;
-    padding-top: 20px;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    margin-bottom: 20px;
+
     @media (orientation: landscape) {
-      //border:2px solid red;
-      margin: 0;
-      padding: 0;
       font-size: 15px;
+      margin-bottom: 0;
     }
   }
+
   Button {
-    width: 60%;
-    font-size: 20px;
+    width: 200px;
+    font-size: 18px;
+    margin-bottom: 20px;
+
     @media (orientation: landscape) {
-      margin: 0;
-      padding: 0;
       width: 100px;
       height: 40px;
       font-size: 15px;
+      margin: 5px;
     }
   }
+
   Button:hover {
     transform: scale(1.1);
     transition: transform 0.3s ease;
     transform-origin: center;
   }
+
   a {
-    background: none;
     color: ${({ theme }) => theme.COLORS.PEC};
-    border: none;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
-    padding-top: 20px;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    margin-bottom: 20px;
+
     @media (orientation: landscape) {
-      margin: 0;
-      padding: 18px;
-      width: 150px;
-      height: 40px;
       font-size: 15px;
+      margin-bottom: 0;
     }
   }
+
   a:hover {
     transform: scale(1.2);
     transition: transform 0.3s ease;
     transform-origin: center;
   }
-`;
 
-export const Background_semus = styled.div`
-  background: url(${semusImg}) no-repeat center center;
-  background-size: contain;
-  width: 90%;
-  height: 90px;
-  @media screen and (min-width: 400px) and {
-    width: 250px;
-    height: 80px;
+  .image_timbiras {
+    background: url(${timbirasImg}) no-repeat center center;
+    background-size: contain;
+    width: 200px;
+    height: 90px;
+    display: flex;
+    text-align: center;
+
+    @media (orientation: landscape) {
+      width: 140px;
+      height: 60px;
+    }
   }
-
-  @media (orientation: landscape) {
-    width: 150px;
-    height: 50px;
-    //border: 5px solid;
-  }
-`;
-
-export const Background_timbiras = styled.div`
-  background: url(${timbirasImg}) no-repeat center center;
-  background-size: contain;
-  width: 150px;
-  height: 90px;
-  margin-top: 50px;
-
-  @media screen and (min-width: 400px) {
-    width: 250px;
-    height: 80px;
-    margin-top: 70px;
-  }
-
-  @media (orientation: landscape) {
-    width: 100px;
-    height: 50px;
-    margin: 0;
-    //border: 5px solid;
-  }
-`;
-
-export const Background_abertura = styled.div`
-  flex: 1;
-  background: url(${aberturaImg}) no-repeat center center;
-  background-size: cover;
-  height: 100vdh;
 `;

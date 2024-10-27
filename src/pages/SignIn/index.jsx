@@ -5,7 +5,7 @@ import { useAuth } from '../../hooks/auth';
 import { Input } from '../../components/Input';
 import { Button } from '../../components/Button';
 
-import { Container, Form, Background_abertura, Background_semus, Background_timbiras } from './styles'; 
+import { Container, Form, Main, BackgroundImage_abertura } from './styles'; 
 
 export function SignIn() {
     const [email, setEmail] = useState("");
@@ -15,36 +15,33 @@ export function SignIn() {
     function handleSignIn() {
         signIn({ email, password });        
     }
+
     return (
         <Container>
-            
             <Form>
-                <Background_semus/>
-                <div className="principal">                           
-                <h1>FAÇA SEU LOGIN</h1>
-                <Input
-                    placeholder="E-mail"
-                    type="text"
-                    icon={FiMail}
-                    onChange={e => setEmail(e.target.value)}
-                />
-                <Input
-                    placeholder="Senha"
-                    type="password"
-                    icon={FiLock}
-                    onChange={e => setPassword(e.target.value)}
-                />                
-                <Button title= "ENTRAR" onClick={handleSignIn} /> 
-
-                <Link to="/register">
-                    CRIAR CONTA
-                </Link>
-            </div>
-                <Background_timbiras/>                
-            
+                <Main>
+                    <div className="image_semus" /> 
+                    <h1>FAÇA SEU LOGIN</h1>
+                    <Input
+                        placeholder="E-mail"
+                        type="text"
+                        icon={FiMail}
+                        onChange={e => setEmail(e.target.value)}
+                    />
+                    <Input
+                        placeholder="Senha"
+                        type="password"
+                        icon={FiLock}
+                        onChange={e => setPassword(e.target.value)}
+                    />                
+                    <Button title="ENTRAR" onClick={handleSignIn} /> 
+                    <Link to="/register">
+                        CRIAR CONTA
+                    </Link>
+                    <div className="image_timbiras" /> 
+                </Main>                             
             </Form>            
-            <Background_abertura />        
-           
+            <BackgroundImage_abertura />      
         </Container>
     );
 }

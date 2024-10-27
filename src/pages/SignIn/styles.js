@@ -49,6 +49,7 @@ export const Main = styled.div`
   align-items: center;
   margin-top: auto;
   margin-bottom: auto;
+  height: 100vh;
 
   //VERTICAL MAIN - tablet,nb,ds
   @media (min-width: 700px) {
@@ -101,7 +102,7 @@ export const Main = styled.div`
       height: 50px;
       margin-top: 5px;
       margin-bottom: 2px;
-      border: 5px solid green;
+      border: 5px solid red;
     }
   }
   // VERTICAL H1 - CELULAR

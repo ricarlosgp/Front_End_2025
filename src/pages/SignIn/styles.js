@@ -64,7 +64,7 @@ export const Main = styled.div`
   // MAIN 577 a 767px = azul
   @media (min-width: 577px) and (max-width: 767px) {
     //background-color: blue;
-    border: 5px solid red;
+    //border: 5px solid red;
     padding: 25px;
   } 
 
@@ -227,14 +227,14 @@ export const Main = styled.div`
       width: 35vw; // VW(viewport width) ocupará a largura da janela de visualização, independentemente do tamanho da tela.
       height: auto;
       aspect-ratio: 2 / 1; /* Ajuste a proporção da altura do elemento em sua caixa. Precisa do height como auto. Foi inserido largura 2 vezes maior que a 1 altura*/ 
-      border: 5px solid red;
+      //border: 5px solid red;
     }
     // TIMBIRAS 993 a 1200px = preto
     @media (min-width: 993px) and (max-width: 1200px) {
       width: 35vw; // VW(viewport width) ocupará a largura da janela de visualização, independentemente do tamanho da tela.
       height: auto;
       aspect-ratio: 2 / 1; /* Ajuste a proporção da altura do elemento em sua caixa. Precisa do height como auto. Foi inserido largura 2 vezes maior que a 1 altura*/ 
-      border: 5px solid red;
+      //border: 5px solid red;
     }
 
     // 1201px para cima = rosa

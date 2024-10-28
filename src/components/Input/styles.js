@@ -7,7 +7,7 @@ export const Container = styled.div`
 
     background-color: ${({ theme }) => theme.COLORS.SEMUS4} ;
     color: ${({ theme }) => theme.COLORS.GRAY_300 } ;
-
+    border: 3px solid transparent;
     margin-bottom: 8px;
     border-radius: 10px;
 

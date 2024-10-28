@@ -3,243 +3,189 @@ import aberturaImg from "../../images/abertura.jpg";
 import semusImg from "../../images/semus.png";
 import timbirasImg from "../../images/timbiras.png";
 
-// VERTICAL - Container + BackgroundImage_abertura
+// CONTAINER até 576px
 export const Container = styled.div`
   display: flex;
   align-items: stretch;
-  height: 100vh;
-
-  @media (min-width: 751px) and (max-width: 999px) and (orientation: landscape) {
-    transform: scale(0.67); /* Aplica o zoom de 67% */
-    transform-origin: top left; /* Define a origem do zoom */
-    width: 100%; /* Para evitar que o container fique cortado após o zoom */
-    overflow: hidden; /* Para evitar barras de rolagem indesejadas */
-  }
+  height: 100vh;    
 `;
 
-// VERTICAL - Estilos para BackgroundImage_abertura
+// IMG DE ABERTURA até 576px
 export const BackgroundImage_abertura = styled.div`
   flex: 1;
   background: url(${aberturaImg}) no-repeat center center;
   background-size: cover;
+  width: 100%;
   height: 100vh;
 `;
 
-// VERTICAL FORM - CELULAR
+// FORM até 576px
 export const Form = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 290px;
+  width: 70%;
   height: 100vh;
-  margin: 0;
-  padding: 0;
 
-  //VERTICAL - FORM
-  @media screen and (min-width: 700px) {
-    width: 700px;
+  // 769 a 992px = preto
+  @media (min-width: 768px) and (max-width: 992px) {
+    width: 55%;          
   }
 
-  //HORIZONTAL FORM - celular
-  @media (max-width: 750px) and (orientation: landscape) {
-    width: 400px;
+  // 993 a 1200px = amarela
+  @media (min-width: 993px) and (max-width: 1200px) {
+    width: 55%;
   }
-  // VERTICAL FORM - desktop
-  @media (min-width: 751px) and (max-width: 999px) and (orientation: landscape) {
-    width: 400px;
-  }
+
+  // 1201px para cima = rosa
+  @media (min-width: 1201px) {
+    width: 40%; 
+  } 
 `;
 
-// VERTICAL MAIN - CELULAR
+/* --------FIM DO FORM--------- */
+
+/* --------INÍCIO DO MAIN--------- */
+
+// MAIN até 576px
 export const Main = styled.div`
+  //background-color: aqua;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: auto;
-  margin-bottom: auto;
-  height: 100vh;
+  align-items: center; /* Alinha verticalmente ao centro */
+  justify-content: center; /* Alinha horizontalmente ao centro */
+  flex-direction: column; /* Coloca os elementos em coluna */
+  text-align: center; /* Centraliza o texto */
+  width: 100%; /* Largura total */
+  height: 100vh; /* Ocupa a altura total da tela */  
+  position: relative; /* Para que outros elementos possam ser posicionados em relação a ele */
+  margin: 0; /* Remove margens */
+  padding: 2px;
 
-  // VERTICAL MAIN - tablet,nb,ds
-  @media (min-width: 700px) {
-    width: 650px;
-    padding: 20px;
-  }
+  // MAIN 577 a 767px = azul
+  @media (min-width: 577px) and (max-width: 767px) {
+    //background-color: blue;
+    border: 5px solid red;
+    padding: 25px;
+  } 
 
-  // VERTICAL MAIN - celular
-  @media (max-width: 750px) and (orientation: landscape) {
-    width: 400px;
+  // MAIN 768 a 992px = preto
+  @media (min-width: 768px) and (max-width: 992px) {
+    //border: 5px solid red;
+    padding: 25px;
+    //background-color: black; 
+  } 
+
+  // MAIN 993 a 1200px = amarela
+  @media (min-width: 993px) and (max-width: 1200px) {
+    padding: 30px;
+    //background-color: yellow; /* Mantém a transparência */
+  } 
+
+  // MAIN 1201px para cima = rosa
+  @media (min-width: 1201px) {
     margin: 0;
-    padding: 5px;
-    display: flex;
-    align-items: center;
-  }
-  //VERTICAL MAIN - tablet
-  @media (min-width: 751px) and (orientation: landscape) {
-    width: 400px;
-    display: flex;
-    align-items: center;
-    // border: 5px solid red;
-  }
-  //VERTICAL MAIN - desktop
-  @media screen and (min-width: 950px) {
-    width: 700px;
-    display: flex;
-    align-items: center;
-    //background-color: aqua;
+    padding: 0;
+    height: 100vh;
+    padding: 30px;
+    //background-color: pink; /* Mantém a transparência */
   }
 
-  // VERTICAL SEMUS - CELULAR
+  // SEMUS até 576px
   .image_semus {
     background: url(${semusImg}) no-repeat center center;
     background-size: contain;
-    width: 200px;
-    height: 70px;
-    margin-bottom: 20px;
+    width: 60vw;
+    height: 20vw;
+    margin-bottom: 40px;
 
-    // VERTICAL SEMUS - tablet,nb,ds
-    @media screen and (min-width: 700px) {
-      width: 350px;
-      height: 90px;
-      margin: 60px;
-    }
-
-    // HORIZONTAL SEMUS - celular
-    @media (max-width: 750px) and (orientation: landscape) {
-      width: 250px;
-      height: 50px;
-      margin: 2px;
-    }
-    //HORIZONTAL SEMUS - tablet
-    @media (min-width: 751px) and (orientation: landscape) {
-      width: 250px;
-      height: 50px;
-      margin-top: 0;
-      margin-bottom: 10px;
+    // SEMUS 769 a 992px = preto
+    @media (min-width: 768px) and (max-width: 992px) {
+      width: 40vw; // VW(viewport width) ocupará a largura da janela de visualização, independentemente do tamanho da tela.
+      height: auto;
+      aspect-ratio: 3 / 1; /* Ajuste a proporção da altura do elemento em sua caixa. Precisa do height como auto. Foi inserido largura 3 vezes maior que a 1 altura*/ 
       //border: 5px solid red;
     }
-    //VERTICAL SEMUS - DESKTOP
-    @media screen and (min-width: 950px) and (orientation: landscape) {
-      width: 500px;
-      height: 150px;
-      margin: 40px auto 50px;
-      //border: 5px solid green;
+
+    // SEMUS 993 a 1200px = amarela 
+    @media (min-width: 993px) and (max-width: 1200px) {
+      width: 40vw; // VW(viewport width) ocupará a largura da janela de visualização, independentemente do tamanho da tela.
+      height: auto;
+      aspect-ratio: 3 / 1; /* Ajuste a proporção da altura do elemento em sua caixa. Precisa do height como auto. Foi inserido largura 3 vezes maior que a 1 altura*/ 
+      //border: 5px solid red;
     }
+
+    // SEMUS acima de 1200px
+    @media (min-width: 1201px) {
+      margin: 20px;
+      width: 50%;
+      height: auto;
+      aspect-ratio: 3 / 1;
+      //border: 5px solid red;
+    } 
   }
 
-  // VERTICAL H1 - CELULAR
+  // H1 até 576px
   h1 {
     background: none;
     color: ${({ theme }) => theme.COLORS.PEC};
-    font-size: 18px;
+    font-size: 4vw;
     font-weight: 700;
     display: inline-block;
     width: auto;
     height: auto;
     margin-bottom: 20px;
 
-    // VERTICAL H1 - tablet,nb,ds
-    @media screen and (min-width: 700px) {
+    // H1 993 a 1200px
+    @media (min-width: 993px) and (max-width: 1200px) {
       font-size: 30px;
-      margin-bottom: 40px;
     }
 
-    // HORIZONTAL H1 - celular
-    @media (max-width: 750px) and (orientation: landscape) {
-      font-size: 20px;
-      margin: 5px;
-    }
-    // HORIZONTAL H1 - tablet
-    @media (min-width: 751px) and (orientation: landscape) {
-      font-size: 14px;
-      margin-bottom: 10px;
-    }
-
-    //VERTICAL H1 - DESKTOP
-    @media screen and (min-width: 950px) {
-      background: none;
-      color: ${({ theme }) => theme.COLORS.PEC};
-      font-size: 20px;
-      font-weight: 700;
-      margin: 50px auto 50px;
-      //border: 5px solid red;
+    // H1 1201 para cima
+    @media (min-width: 1201px) {
+      font-size: 15px;
     }
   }
 
-  // VERTICAL INPUT - tablet,nb,ds
+  // INPUT 993 a 1200px
   input {
-    @media screen and (min-width: 700px) {
-      font-size: 30px;
+    @media (min-width: 993px) and (max-width: 1200px) {
+      font-size: 30px;      
     }
 
-    // HORIZONTAL INPUT - celular
-    @media (max-width: 750px) and (orientation: landscape) {
-      height: 50px;
-      font-size: 20px;
-    }
-    // HORIZONTAL INPUT - tablet
-    @media (min-width: 751px) and (orientation: landscape) {
-      height: 40px;
-      font-size: 20px;
-      display: flex;
-      text-align: justify;
-      //border: 5px solid;
-    }
-    //VERTICAL INPUT - desktop
-    @media screen and (min-width: 950px) {
-      background: none;
-      color: ${({ theme }) => theme.COLORS.PEC};
+    // a 1201 para cima
+    @media (min-width: 1201px) {
       font-size: 30px;
-      font-weight: normal;
-      height: 60px;
+      
     }
   }
 
-  // VERTICAL BUTTON - CELULAR
+  
+
+  // BUTTON até 576px
   Button {
-    width: 200px;
-    font-size: 18px;
+    width: 30vw;
+    font-size: 3vw;
     margin-bottom: 20px;
 
-    // VERTICAL BUTTON - tablet,nb,ds
-    @media screen and (min-width: 700px) {
-      font-size: 25px;
-      width: 200px;
-      height: 40px;
-      margin: 30px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    // HORIZONTAL BUTTON - celular
-    @media (max-width: 750px) and (orientation: landscape) {
-      margin: 0;
-      height: 40px;
-      font-size: 20px;
-    }
-    // HORIZONTAL BUTTON - tablet
-    @media (min-width: 751px) and (orientation: landscape) {
-      margin-bottom: 10px;
-      height: 40px;
-      font-size: 20px;
-    }
-    // HORIZONTAL BUTTON - DESKTOP
-    @media screen and (min-width: 950px) {
+    // BUTTON 1201 para cima
+    @media (min-width: 1201px) {
+      margin: 20px;
+      width: 40%;
+      height: auto;
+      aspect-ratio: 3 / 1;
       font-size: 30px;
-      height: 50px;
-      font-weight: 700;
-      margin: 50px auto 50px;
+      // border: 5px solid red;
     }
   }
 
+  // até 576px
   Button:hover {
     transform: scale(1.1);
     transition: transform 0.3s ease;
     transform-origin: center;
   }
 
-  // VERTICAL A - CELULAR
+  // até 576px
   a {
     color: ${({ theme }) => theme.COLORS.PEC};
     font-size: 18px;
@@ -247,81 +193,53 @@ export const Main = styled.div`
     display: inline-block;
     width: auto;
     height: auto;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 
-    // VERTICAL A - tablet,nb,ds
-    @media screen and (min-width: 700px) {
-      font-size: 25px;
-      width: 200px;
-      height: 40px;
-      margin: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    // a 993 a 1200px
+    @media (min-width: 993px) and (max-width: 1200px) {
+      font-size: 3vw;
     }
 
-    // HORIZONTAL A - celular
-    @media (max-width: 750px) and (orientation: landscape) {
-      margin: 2px;
-      height: 40px;
-      font-size: 18px;
-    }
-    // HORIZONTAL A - tablet
-    @media (min-width: 751px) and (orientation: landscape) {
-      margin-bottom: 10px;
-      height: 40px;
-      font-size: 15px;
-    }
-
-    @media screen and (min-width: 950px) {
-      background: none;
-      color: ${({ theme }) => theme.COLORS.PEC};
+    // a 1201 para cima
+    @media (min-width: 1201px) {
       font-size: 20px;
-      font-weight: 700;
-      margin: 30px auto 50px;
-      //border: 5px solid red;
     }
   }
 
+  // para todos
   a:hover {
     transform: scale(1.2);
     transition: transform 0.3s ease;
     transform-origin: center;
   }
 
-  // VERTICAL TIMBIRAS - celular
+  // até 576px
   .image_timbiras {
     background: url(${timbirasImg}) no-repeat center center;
     background-size: contain;
-    width: 200px;
-    height: 90px;
+    width: 60vw; /* Ajusta o tamanho responsivamente */
+    aspect-ratio: 5 / 2; /* Define a proporção da imagem (ajuste conforme necessário) */
     display: flex;
     text-align: center;
 
-    // VERTICAL TIMBIRAS - tablet,nb,ds
-    @media screen and (min-width: 700px) {
-      width: 350px;
-      height: 150px;
-      margin: 30px;
+    // TIMBIRAS 768 a 992px = preto
+    @media (min-width: 768px) and (max-width: 992px) {
+      width: 35vw; // VW(viewport width) ocupará a largura da janela de visualização, independentemente do tamanho da tela.
+      height: auto;
+      aspect-ratio: 2 / 1; /* Ajuste a proporção da altura do elemento em sua caixa. Precisa do height como auto. Foi inserido largura 2 vezes maior que a 1 altura*/ 
+      border: 5px solid red;
+    }
+    // TIMBIRAS 993 a 1200px = preto
+    @media (min-width: 993px) and (max-width: 1200px) {
+      width: 35vw; // VW(viewport width) ocupará a largura da janela de visualização, independentemente do tamanho da tela.
+      height: auto;
+      aspect-ratio: 2 / 1; /* Ajuste a proporção da altura do elemento em sua caixa. Precisa do height como auto. Foi inserido largura 2 vezes maior que a 1 altura*/ 
+      border: 5px solid red;
     }
 
-    // HORIZONTAL TIMBIRAS - celular
-    @media (max-width: 750px) and (orientation: landscape) {
-      margin: 0;
-      height: 45px;
-    }
-    // HORIZONTAL TIMBIRAS - tablet
-    @media (min-width: 751px) and (orientation: landscape) {
-      margin: 0;
-      height: 60px;
-    }
-
-    //VERTICAL TIMBIRAS - DESKTOP
-    @media screen and (min-width: 950px) {
-      width: 500px;
-      height: 150px;
-      margin: 20px auto 40px;
-      //border: 5px solid red;
-    }
+    // 1201px para cima = rosa
+    @media (min-width: 1201px) {
+      width: 50%;
+    } 
   }
-`;
+`; /* --------FIM DO MAIN--------- */

@@ -22,18 +22,22 @@ export function SignIn() {
                 <Main>
                     <div className="image_semus" /> 
                     <h1>FAÇA SEU LOGIN</h1>
+
                     <Input
-                        placeholder="E-mail"
-                        type="text"
-                        icon={FiMail}
-                        onChange={e => setEmail(e.target.value)}
-                    /> 
+                            placeholder="E-mail"
+                            type="text"
+                            icon={FiMail}
+                            onChange={e => setEmail(e.target.value)}
+                    />
+                        
                     <Input
-                        placeholder="Senha"
-                        type="password"
-                        icon={FiLock}
-                        onChange={e => setPassword(e.target.value)}
-                    />                
+                            placeholder="Senha"
+                            type="password"
+                            icon={FiLock}
+                            onChange={e => setPassword(e.target.value)}
+                    />  
+                   
+
                     <Button title="ENTRAR" onClick={handleSignIn} /> 
                     <Link to="/register">
                         CRIAR CONTA
